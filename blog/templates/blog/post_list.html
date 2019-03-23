@@ -1,9 +1,14 @@
+{% load static %}
 <html>
     <head>
         <title>Caitlin's blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <style>
           h1 {text-align:center;}
           h2 {text-align:center;}
+          h3 {text-align:center;}
           p {text-align:center;}
 </style>
     </head>
@@ -15,20 +20,19 @@
         <br>
         <br>
         <br>
-        <h1 style="color:white;">You have been chosen</h1>
-        <p style="color:white;"> <strong>Welcome to the</strong></p>
+        <h1>You have been chosen</h1>
+        <h3> <strong>www.elcome to the</strong></h3>
         </div>
         <div>
-          <h1 style="color:white;"> H-A-C-K-E-R-V-E-R-S-E </h1>
+          <h1> H-A-C-K-E-R-V-E-R-S-E </h1>
         </div>
-        <br>
         <br>
         <br>
         <div>
     {% for post in posts %}
     <div>
         <h2><a href="">{{ post.title }}</a></h2>
-        <p style="color:red;">{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
     {% endfor %}
           </div>
