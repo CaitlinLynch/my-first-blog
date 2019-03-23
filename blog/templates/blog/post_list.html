@@ -15,14 +15,22 @@
         <br>
         <br>
         <br>
-        <br>
-        <br>      
         <h1 style="color:white;">You have been chosen</h1>
-        <p style="color:white;"> <strong>Welcome</strong></p>
-        <p style="color:white;">to the</p>
+        <p style="color:white;"> <strong>Welcome to the</strong></p>
         </div>
         <div>
-          <h2 style="color:red;"> hackerverse </h2>
+          <h1 style="color:white;"> H-A-C-K-E-R-V-E-R-S-E </h1>
         </div>
+        <br>
+        <br>
+        <br>
+        <div>
+    {% for post in posts %}
+    <div>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p style="color:red;">{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+          </div>
     </body>
 </html>
